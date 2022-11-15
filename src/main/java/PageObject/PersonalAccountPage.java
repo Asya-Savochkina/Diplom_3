@@ -15,6 +15,8 @@ public class PersonalAccountPage extends BasePage{
     private final By forgetPasswordBottom = By.linkText("Восстановить пароль");
     //поле ввода "Email"
     private final By emailField = By.name("name");
+    //кнопка "Выход" в личном кабинете
+    private final By exitBottom = By.className("Account_button__14Yp3 text text_type_main-medium text_color_inactive");
     //поле ввода "Password"
     private final By passwordField = By.name("Пароль");
     //кнопка раздела "Конструктор"
@@ -44,6 +46,10 @@ public class PersonalAccountPage extends BasePage{
 
     public void clickForgetPasswordBottom() {
         webDriver.findElement(forgetPasswordBottom).click();
+    }
+
+    public void clickExitBottom() {
+        webDriver.findElement(exitBottom).click();
     }
 
     public void clickLogo() {
