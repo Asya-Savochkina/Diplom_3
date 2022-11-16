@@ -1,4 +1,4 @@
-package PageObject;
+package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,16 +19,20 @@ public class RegistrationPage extends BasePage{
         super(webDriver);
     }
 
+    public void openRegistrationPage() {
+        webDriver.get("https://stellarburgers.nomoreparties.site/register");
+    }
+
     public void setRegNameField(String name) {
         webDriver.findElement(regNameField).sendKeys(name);
     }
 
-    public void setRegEmailField(String name) {
-        webDriver.findElement(regEmailField).sendKeys(name);
+    public void setRegEmailField(String email) {
+        webDriver.findElement(regEmailField).sendKeys(email);
     }
 
-    public void setRegPasswordField(String name) {
-        webDriver.findElement(regPasswordField).sendKeys(name);
+    public void setRegPasswordField(String password) {
+        webDriver.findElement(regPasswordField).sendKeys(password);
     }
 
     public void clickRegAccountButton() {
@@ -37,5 +41,11 @@ public class RegistrationPage extends BasePage{
 
     public void clickRegLoginButton() {
         webDriver.findElement(regLoginButton).click();
+    }
+
+    public void regDataField(String name, String email, String password) {
+        setRegNameField(name);
+        setRegEmailField(email);
+        setRegPasswordField(password);
     }
 }

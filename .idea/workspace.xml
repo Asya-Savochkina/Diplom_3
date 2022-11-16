@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45c2cc9b-c576-45b8-b1b4-aa5b530b9211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/ConstructorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/ConstructorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pom/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/ConstructorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pom/ConstructorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pom/PersonalAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pom/RegistrationPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +37,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegistrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RegistrationTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

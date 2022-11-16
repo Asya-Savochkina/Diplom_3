@@ -1,4 +1,4 @@
-package PageObject;
+package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,11 @@ public class PersonalAccountPage extends BasePage{
     //кнопка "Зарегистрироваться"
     private final By regBottom = By.linkText("Зарегистрироваться");
     //кнопка "Восстановить пароль"
-    private final By forgetPasswordBottom = By.linkText("Восстановить пароль");
+    private final By forgotPasswordBottom = By.linkText("Восстановить пароль");
+    //поле ввода email для восстановления пароля
+    private final By forgotPasswordEmailField = By.name("name");
+    //кнопка "Восстановить" для восстановления пароля
+    private final By restorePasswordBottom = By.linkText("Восстановить");
     //поле ввода "Email"
     private final By emailField = By.name("name");
     //кнопка "Выход" в личном кабинете
@@ -28,7 +32,7 @@ public class PersonalAccountPage extends BasePage{
         super(webDriver);
     }
 
-    public void open() {
+    public void openMainPage() {
         webDriver.get("https://stellarburgers.nomoreparties.site/");
     }
 
@@ -44,8 +48,8 @@ public class PersonalAccountPage extends BasePage{
         webDriver.findElement(loginBottom).click();
     }
 
-    public void clickForgetPasswordBottom() {
-        webDriver.findElement(forgetPasswordBottom).click();
+    public void clickForgotPasswordBottom() {
+        webDriver.findElement(forgotPasswordBottom).click();
     }
 
     public void clickExitBottom() {
@@ -60,11 +64,22 @@ public class PersonalAccountPage extends BasePage{
         webDriver.findElement(constructorBottom).click();
     }
 
-    public void setEmailField(String name) {
-        webDriver.findElement(emailField).sendKeys(name);
+    public void setEmailField(String email) {
+        webDriver.findElement(emailField).sendKeys(email);
     }
 
-    public void setPasswordField(String name) {
-        webDriver.findElement(passwordField).sendKeys(name);
+    public void setPasswordField(String password) {
+        webDriver.findElement(passwordField).sendKeys(password);
+    }
+
+    public void authDataField(String email, String password) {
+        setEmailField(email);
+        setPasswordField(password);
+    }
+
+    public void setEmailForRestorePassword(String email) {webDriver.findElement(forgotPasswordEmailField).sendKeys(email); }
+
+    public void clickRestorePasswordBottom() {
+        webDriver.findElement(restorePasswordBottom).click();
     }
 }
