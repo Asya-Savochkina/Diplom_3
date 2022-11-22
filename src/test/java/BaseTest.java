@@ -9,13 +9,14 @@ import org.openqa.selenium.html5.WebStorage;
 import java.util.concurrent.TimeUnit;
 
 public abstract class BaseTest {
-    protected static final WebDriver webDriver = new ChromeDriver();
+    protected static WebDriver webDriver;
 
     @BeforeClass
     public static void setup() {
         WebDriverManager.chromedriver().setup();
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        webDriver.get("https://stellarburgers.nomoreparties.site/");
+        webDriver = new ChromeDriver();
+        webDriver.get("http://stellarburgers.nomoreparties.site/");
+        webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     @After
