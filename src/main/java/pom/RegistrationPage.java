@@ -5,8 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RegistrationPage extends BasePage{
-    //поля ввода для регистрации
-    private final By registerForm = By.xpath("//input[@class='text input__textfield text_type_main-default']");
+    //поля ввода имени для регистрации
+    private final By regName = By.xpath("//fieldset[1]//input");
+    //поле ввода email для регистрации
+    private final By regEmail = By.xpath("//fieldset[2]//input");
+    //поле ввода пароля для регистрации
+    private final By regPassword = By.xpath("//fieldset[3]//input");
     //Ошибка при вводе короткого пароля
     private final By shortPasswordError = By.xpath("//p[text()='Некорректный пароль']");
     //кнопка "Зарегистрироваться"
@@ -34,9 +38,9 @@ public class RegistrationPage extends BasePage{
     }
 
     public void regDataField(String name, String email, String password) {
-        webDriver.findElements(registerForm).get(0).sendKeys(name);
-        webDriver.findElements(registerForm).get(1).sendKeys(email);
-        webDriver.findElements(registerForm).get(2).sendKeys(password);
+        webDriver.findElement(regName).sendKeys(name);
+        webDriver.findElement(regEmail).sendKeys(email);
+        webDriver.findElement(regPassword).sendKeys(password);
     }
 
     public String getTextOfShortPasswordError() {

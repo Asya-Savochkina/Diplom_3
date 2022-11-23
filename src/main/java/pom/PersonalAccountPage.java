@@ -10,10 +10,8 @@ public class PersonalAccountPage extends BasePage{
     private final By personalAccountBottom = By.xpath("//p[text()='Личный Кабинет']");
     //кнопка "Войти в аккаунт"
     private final By loginAccountButton = By.xpath("//button[text()='Войти в аккаунт']");
-
     //кнопка "Войти"
     private final By loginBottom = By.xpath(".//button[(text()='Войти')]");
-
     //кнопка "Зарегистрироваться"
     private final By regBottom = By.linkText("Зарегистрироваться");
     //кнопка "Восстановить пароль"
@@ -22,9 +20,6 @@ public class PersonalAccountPage extends BasePage{
     private final By forgotPasswordEmailField = By.name("name");
     //кнопка "Восстановить" для восстановления пароля
     private final By restorePasswordBottom = By.linkText("Восстановить");
-
-    //поля ввода для входа
-    private final By registerForm = By.xpath("//input[@class='text input__textfield text_type_main-default']");
     //кнопка "Выход" в личном кабинете
     private final By exitBottom =  By.xpath("//button[text()='Выход']");
     //поле ввода "email"
@@ -37,13 +32,14 @@ public class PersonalAccountPage extends BasePage{
     private final By constructorBottom = By.linkText("Конструктор");
     //лого Stellar Burger
     private final By stellarBurgerLogo = By.className("AppHeader_header__logo__2D0X2");
+    public final String MAIN_URL = "https://stellarburgers.nomoreparties.site/";
 
     public PersonalAccountPage(WebDriver webDriver) {
         super(webDriver);
     }
 
     public void openMainPage() {
-        webDriver.get("https://stellarburgers.nomoreparties.site/");
+        webDriver.get(MAIN_URL);
     }
 
     public void clickPersonalAccountBottom() {
@@ -81,13 +77,9 @@ public class PersonalAccountPage extends BasePage{
     public void setEmailField(String email) {
         webDriver.findElement(emailField).sendKeys(email);
     }
+
     public void setPasswordField(String password) {
         webDriver.findElement(passwordField).sendKeys(password);
-    }
-
-    public void loginDataField(String email, String password) {
-        webDriver.findElements(registerForm).get(0).sendKeys(email);
-        webDriver.findElements(registerForm).get(1).sendKeys(password);
     }
 
     public void checkEntryHeaderIsDisplayed() {

@@ -19,7 +19,7 @@ public class RegistrationTest extends BaseTest {
     CreateTheUserRequest createTheUserWithWrongPassword = new CreateTheUserRequest();
     RegAndAuthForUser regAndAuthForUser = new RegAndAuthForUser();
 
-    private static final String MAIL = RandomStringUtils.randomAlphanumeric(5) + "@example.ru";
+    private static final String MAIL = RandomStringUtils.randomAlphanumeric(6) + "@example.ru";
     private static final String SHORT_PASSWORD = RandomStringUtils.randomAlphanumeric(2);
     private static final String NAME = RandomStringUtils.randomAlphanumeric(5);
 

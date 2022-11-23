@@ -12,15 +12,10 @@ public class ConstructorPage extends BasePage{
     private final By saucesSection = By.xpath("//span[text()='Соусы']");
     //раздел конструктора "Начинки"
     private final By toppingsSection = By.xpath("//span[text()='Начинки']");
+    //активный раздел конструктора
+    private final By activeSection = By.xpath("//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[@class='text text_type_main-default']");
     //заголовок "Соберите бургер"
     private final By makeYourBurgerHeader = By.xpath("//h1[text()='Соберите бургер']");
-    //флюорисцентная булка
-    private final By fluBun = By.xpath("//img[@alt='Флюоресцентная булка R2-D3']");
-    //фирменный соус
-    private final By firmSauce = By.xpath("//img[@alt='Соус фирменный Space Sauce']");
-    //начинка мясо моллюсков
-    private final By shellfishMeat = By.xpath("//img[@alt='Мясо бессмертных моллюсков Protostomia']");
-
 
     public ConstructorPage(WebDriver webDriver) {
         super(webDriver);
@@ -44,15 +39,7 @@ public class ConstructorPage extends BasePage{
         Assert.assertTrue(webDriver.findElement(makeYourBurgerHeader).isDisplayed());
     }
 
-    public void checkBunIsDisplayed() {
-        Assert.assertTrue(webDriver.findElement(fluBun).isDisplayed());
-    }
-
-    public void checkSaucesIsDisplayed() {
-        Assert.assertTrue(webDriver.findElement(firmSauce).isDisplayed());
-    }
-
-    public void checkToppingIsDisplayed() {
-        Assert.assertTrue(webDriver.findElement(shellfishMeat).isDisplayed());
+    public String getTextFromActiveSection() {
+        return webDriver.findElement(activeSection).getText();
     }
 }

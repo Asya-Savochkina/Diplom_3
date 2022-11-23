@@ -1,5 +1,6 @@
 import io.qameta.allure.junit4.DisplayName;
 import jdk.jfr.Description;
+import org.junit.Assert;
 import org.junit.Test;
 import pom.ConstructorPage;
 import pom.PersonalAccountPage;
@@ -13,7 +14,7 @@ public class ConstructorTest extends BaseTest {
         ConstructorPage constructorPage = new ConstructorPage(webDriver);
         constructorPage.clickSaucesSection();
         constructorPage.clickBunsSection();
-        constructorPage.checkBunIsDisplayed();
+        Assert.assertEquals("Булки", constructorPage.getTextFromActiveSection());
     }
 
     @Test
@@ -23,7 +24,7 @@ public class ConstructorTest extends BaseTest {
         ConstructorPage constructorPage = new ConstructorPage(webDriver);
         constructorPage.clickToppingsSection();
         constructorPage.clickSaucesSection();
-        constructorPage.checkSaucesIsDisplayed();
+        Assert.assertEquals("Соусы", constructorPage.getTextFromActiveSection());
     }
 
     @Test
@@ -33,6 +34,6 @@ public class ConstructorTest extends BaseTest {
         ConstructorPage constructorPage = new ConstructorPage(webDriver);
         constructorPage.clickSaucesSection();
         constructorPage.clickToppingsSection();
-        constructorPage.checkToppingIsDisplayed();
+        Assert.assertEquals("Начинки", constructorPage.getTextFromActiveSection());
     }
 }
