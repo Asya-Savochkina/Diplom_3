@@ -62,7 +62,9 @@ public class PersonalAccountTest extends BaseTest {
         registrationPage.clickRegAccountButton();
         personalAccountPage.openMainPage();
         personalAccountPage.clickLoginAccountBottom();
-        personalAccountPage.loginDataField(MAIL, PASSWORD);
+        personalAccountPage.setEmailField(MAIL);
+        personalAccountPage.setPasswordField(PASSWORD);
+        personalAccountPage.clickLoginBottom();
         constructorPage.checkMakeYourBurgerIsDisplayed();
     }
 }
